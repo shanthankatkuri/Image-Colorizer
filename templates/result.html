@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorization Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .image-box {
+            max-width: 45%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .download-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+        .back-btn {
+            background-color: #666;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .back-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colorization Result</h1>
+    <div class="image-container">
+        <div class="image-box">
+            <h2>Original Image</h2>
+            <img src="{{ original }}" alt="Original Image">
+        </div>
+        <div class="image-box">
+            <h2>Colorized Image</h2>
+            <img src="{{ colorized }}" alt="Colorized Image">
+        </div>
+        <div>
+            <a href="{{ colorized }}" download class="download-btn">Download Colorized Image</a>
+            <a href="/" class="back-btn">Upload Another Image</a>
+        </div>
+    </div>
+    
+</body>
+</html>
